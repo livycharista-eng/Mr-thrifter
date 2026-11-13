@@ -2,7 +2,7 @@
 
 > **Buy, Rent, Exchange — Make Student Life More Affordable.**
 
-ThriftOper adalah nama proyek kompetisi untuk **Mr Thrifter**, sebuah konsep *student marketplace* yang membantu mahasiswa membeli, menjual, menyewakan, dan menukarkan barang pre-loved kebutuhan kuliah maupun gaya hidup. Platform ini mendorong penggunaan barang yang lebih optimal dan membantu mahasiswa mengelola pengeluaran.
+Mr Thrifter adalah sebuah konsep *student marketplace* yang membantu mahasiswa membeli, menjual, menyewakan, dan menukarkan barang pre-loved kebutuhan kuliah maupun gaya hidup. Platform ini mendorong penggunaan barang yang lebih optimal dan membantu mahasiswa mengelola pengeluaran.
 
 ## 1. Identitas Tim
 
