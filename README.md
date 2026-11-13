@@ -1,4 +1,4 @@
-# ThriftOper — Mr Thrifter
+# Mr Thrifter
 
 > **Buy, Rent, Exchange — Make Student Life More Affordable.**
 
@@ -6,20 +6,18 @@ ThriftOper adalah nama proyek kompetisi untuk **Mr Thrifter**, sebuah konsep *st
 
 ## 1. Identitas Tim
 
-- **Nama proyek:** ThriftOper
 - **Nama aplikasi:** Mr Thrifter
 - **Kompetisi:** Web Design COMMIT 2026
 - **Tema:** Optimasi Keuangan dan Gaya Hidup
-- **Nama tim:** `[Isi nama tim]`
+- **Nama tim:** `belum ada nama grup`
 
 ### Anggota dan pembagian peran
 
 | No. | Nama anggota | Peran / tanggung jawab |
 |---|---|---|
-| 1 | `[Nama anggota 1]` | `[Contoh: Project Lead / UI/UX]` |
-| 2 | `[Nama anggota 2]` | `[Contoh: Front-End Developer]` |
-| 3 | `[Nama anggota 3]` | `[Contoh: Back-End Developer]` |
-| 4 | `[Nama anggota 4]` | `[Contoh: Documentation / QA]` |
+| 1 | `Samuel Lukas Pratama` 
+| 2 | `Nadhifa Azka Sherin`
+| 3 | `Livy Charista Darlene Ferdianto` 
 
 ## 2. Deskripsi Proyek
 
@@ -130,24 +128,23 @@ Contoh request POST:
 ## 6. Website Deployment
 
 - **Live website:** `[Masukkan URL website yang sudah di-deploy]`
-- **Repository GitHub:** `[Masukkan URL repository]`
+- **Repository GitHub:** `https://github.com/livycharista-eng/Mr-thrifter`
 
 > Catatan: frontend statis dapat di-deploy pada layanan hosting statis. Agar fitur sinkronisasi data berjalan untuk semua pengguna, backend juga harus di-deploy pada server yang dapat diakses publik dan nilai `API_URL` di `script.js` perlu disesuaikan dengan URL backend tersebut. `localStorage` hanya menjadi fallback lokal pada browser pengguna.
 
 ## 7. Penggunaan AI, Starter Code, dan Aset Pihak Ketiga
 
 ### Penggunaan AI
-AI digunakan sebagai alat bantu dalam proses pengembangan, khususnya untuk:
+AI (ChatGPT dan Gemini) digunakan sebagai alat bantu dalam proses pengembangan, khususnya untuk:
 - Membantu menyusun struktur awal HTML, CSS, dan JavaScript.
 - Membantu merancang alur logika filter, kalkulator, rekomendasi harga, dan integrasi REST API.
-- Membantu dokumentasi kode dan penyusunan README.
 
-Seluruh kode dan hasil implementasi tetap perlu ditinjau, diuji, dan dipahami oleh anggota tim sebelum dipresentasikan atau dikumpulkan. Penggunaan AI tidak dimaksudkan untuk menggantikan proses validasi dan tanggung jawab tim atas hasil akhir.
+Seluruh kode dan hasil implementasi tetap ditinjau, diuji, dan dipahami oleh anggota tim sebelum dipresentasikan dan dikumpulkan. Penggunaan AI tidak dimaksudkan untuk menggantikan proses validasi dan tanggung jawab tim atas hasil akhir.
 
 ### Starter code
 - Proyek ini menggunakan struktur HTML, CSS, dan JavaScript mandiri.
 - Backend menggunakan pola REST API sederhana dengan Express.js.
-- Tidak menggunakan template marketplace komersial sebagai starter code. Jika tim menambahkan starter code lain, cantumkan nama, URL sumber, lisensi, dan bagian yang digunakan di sini.
+- Tidak menggunakan template marketplace komersial sebagai starter code. 
 
 ### Aset pihak ketiga
 - **Font:** [Google Fonts](https://fonts.google.com/) — DM Sans dan Manrope.
