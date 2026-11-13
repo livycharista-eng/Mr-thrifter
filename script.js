@@ -5,8 +5,7 @@
    ========================================================= */
 
 // Konfigurasi backend. Saat server aktif, frontend mengambil data melalui REST API.
-const API_URL = "http://localhost:3000/api/items";
-
+const API_URL = "/api/items";
 // Nomor WhatsApp demo. Ganti dengan nomor admin/penjual yang benar saat deployment.
 const DEFAULT_WA_NUMBER = "6281234567890";
 
