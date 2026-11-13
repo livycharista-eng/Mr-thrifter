@@ -1879,3 +1879,89 @@ textarea:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* =========================================================
+   PRODUCT CARD — JAVASCRIPT CLASS COMPATIBILITY
+   ========================================================= */
+
+.type-badge,
+.discount-badge {
+  position: absolute;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.type-badge {
+  top: 13px;
+  left: 13px;
+  color: white;
+}
+
+.badge-sale {
+  background: var(--primary);
+}
+
+.badge-rent {
+  background: #b58b50;
+}
+
+.badge-barter {
+  background: #647b91;
+}
+
+.discount-badge {
+  top: 13px;
+  right: 13px;
+  background: #b65b43;
+  color: white;
+}
+
+.product-body {
+  padding: 17px;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+  color: var(--primary);
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.product-price del {
+  color: var(--text-light);
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.product-price small {
+  color: var(--text-secondary);
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.product-wanted {
+  margin: 12px 0;
+  padding: 11px;
+  background: var(--primary-light);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.product-wanted strong {
+  display: block;
+  margin-top: 3px;
+  color: var(--primary);
+  font-size: 11px;
+}
