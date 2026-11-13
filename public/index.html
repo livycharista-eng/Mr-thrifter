@@ -1,1 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- Metadata dasar untuk memastikan halaman tampil baik di perangkat dan mesin pencari. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173f35">
+  <meta name="description" content="Mr Thrifter — marketplace mahasiswa untuk beli, sewa, dan barter barang pre-loved.">
+  <title>Mr Thrifter — Thrift smarter, live better</title>
 
+  <!-- Google Fonts digunakan untuk hierarki tipografi yang konsisten. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header utama berisi identitas brand dan navigasi ke bagian penting website. -->
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Mr Thrifter beranda">
+      <span class="brand-mark">m<span>t</span></span>
+      <span class="brand-name">mr<span>thrifter</span><small>STUDENT MARKETPLACE</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navigasi utama">
+      <a href="#explore">Explore</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#savings">Student savings</a>
+    </nav>
+    <button class="button button-dark header-cta" id="openListingTop" type="button">＋ Titip Barang</button>
+  </header>
+
+  <main>
+    <!-- Hero section memperkenalkan manfaat utama platform dan mengarahkan pengguna ke katalog. -->
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> THE STUDENT CIRCULAR MARKETPLACE</span>
+        <h1>Good finds.<br><em>Better</em> student life.</h1>
+        <p class="hero-description">Temukan barang kuliah yang kamu butuhkan, sewakan yang sedang menganggur, atau tukarkan yang sudah tak terpakai. Lebih hemat, lebih bermakna.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#explore">Jelajahi barang <span>↗</span></a>
+          <button class="button button-outline" id="openListingHero" type="button">＋ Titip barang</button>
+        </div>
+        <div class="hero-proof">
+          <div class="avatar-stack" aria-hidden="true"><span>R</span><span>A</span><span>N</span><span>＋</span></div>
+          <p><strong>Made for students</strong><br><span>Barang bermanfaat, budget tetap aman.</span></p>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Ilustrasi barang pre-loved untuk mahasiswa">
+        <div class="hero-sticker sticker-top">PRE-LOVED<br>WITH PURPOSE</div>
+        <div class="hero-photo hero-photo-main">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=85" alt="Meja belajar dengan laptop dan perlengkapan kerja">
+        </div>
+        <div class="hero-photo hero-photo-small">
+          <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=500&q=85" alt="Buku-buku yang dapat digunakan kembali">
+        </div>
+        <div class="hero-note"><span>↗</span><strong>Reuse it.</strong><br>Love it again.</div>
+        <div class="hero-circle">SAVE<br>MORE<br>WASTE<br>LESS</div>
+      </div>
+    </section>
+
+    <!-- Dashboard mini menghitung potensi hemat dari harga baru dan harga pre-loved contoh. -->
+    <section class="savings-section section-wrap" id="savings">
+      <div class="savings-intro">
+        <span class="eyebrow">YOUR MONEY, YOUR MOVE</span>
+        <h2>Small choices.<br><em>Real savings.</em></h2>
+        <p>Simulasikan potensi penghematan saat memilih barang pre-loved dibandingkan barang baru.</p>
+      </div>
+      <div class="savings-calculator">
+        <div class="calculator-heading"><span class="calculator-icon">↘</span><div><strong>Thrift savings calculator</strong><small>Hitung estimasi hematmu</small></div><span class="live-tag">LIVE CALC</span></div>
+        <div class="calculator-fields">
+          <label>Harga barang baru (Rp)<input id="newPriceInput" type="number" min="0" step="1000" value="500000" inputmode="numeric"></label>
+          <label>Harga pre-loved (Rp)<input id="usedPriceInput" type="number" min="0" step="1000" value="325000" inputmode="numeric"></label>
+        </div>
+        <div class="saving-result">
+          <div><small>Potensi uang yang bisa kamu hemat</small><strong id="savingAmount">Rp175.000</strong></div>
+          <span id="savingPercent">35% lebih hemat</span>
+        </div>
+        <p class="calculator-footnote">*Simulasi berdasarkan harga yang kamu masukkan, bukan jaminan harga pasar.</p>
+      </div>
+    </section>
+
+    <!-- Katalog menyediakan tab transaksi, pencarian, dan filter yang diminta outline. -->
+    <section class="market-section section-wrap" id="explore">
+      <div class="section-heading">
+        <div><span class="eyebrow">THE GOOD STUFF IS HERE</span><h2>Find your next <em>favorite.</em></h2></div>
+        <button class="button button-dark" id="openListingCatalog" type="button">＋ Titip Barang</button>
+      </div>
+
+      <div class="market-toolbar">
+        <div class="transaction-tabs" role="tablist" aria-label="Filter jenis transaksi">
+          <button class="transaction-tab active" data-type="all" role="tab" aria-selected="true">Semua <span id="countAll">0</span></button>
+          <button class="transaction-tab" data-type="sale" role="tab" aria-selected="false">Beli <span>↗</span></button>
+          <button class="transaction-tab" data-type="rent" role="tab" aria-selected="false">Sewa <span>↗</span></button>
+          <button class="transaction-tab" data-type="barter" role="tab" aria-selected="false">Barter <span>↗</span></button>
+        </div>
+        <div class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Cari barang, mis. kalkulator..." aria-label="Cari barang"></div>
+      </div>
+
+      <div class="filter-row">
+        <label class="filter-control"><span>Kategori</span><select id="categoryFilter"><option value="all">Semua kategori</option><option>Elektronik</option><option>Buku</option><option>Fashion</option><option>Perlengkapan Kuliah</option><option>Lainnya</option></select></label>
+        <label class="filter-control"><span>Kondisi</span><select id="conditionFilter"><option value="all">Semua kondisi</option><option value="new">New</option><option value="rarely">Jarang dipakai</option><option value="sometimes">Lumayan sering</option><option value="often">Sering dipakai</option></select></label>
+        <label class="filter-control"><span>Lokasi</span><input id="locationFilter" type="search" placeholder="Area / kampus"></label>
+        <label class="filter-control"><span>Harga maksimum</span><input id="maxPriceFilter" type="number" min="0" placeholder="Tanpa batas"></label>
+        <label class="filter-control discount-filter"><span>Diskon</span><select id="discountFilter"><option value="0">Semua diskon</option><option value="10">10% atau lebih</option><option value="20">20% atau lebih</option><option value="30">30% atau lebih</option><option value="50">50% atau lebih</option></select></label>
+        <button class="text-button" id="resetFilters" type="button">Reset filter ↺</button>
+      </div>
+
+      <div class="catalog-meta"><p id="resultsLabel">Menampilkan pilihan untukmu</p><span>CURATED FOR CAMPUS LIFE</span></div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <div class="empty-state hidden" id="emptyState"><span>⌕</span><h3>Belum ada barang yang cocok.</h3><p>Coba ubah kata kunci atau filter pencarianmu.</p><button class="button button-outline" id="resetEmpty" type="button">Reset pencarian</button></div>
+    </section>
+
+    <!-- Bagian edukasi singkat menjelaskan alur transaksi sesuai konsep marketplace mahasiswa. -->
+    <section class="how-section section-wrap" id="how-it-works">
+      <div class="how-heading"><span class="eyebrow">SIMPLE AS ONE, TWO, THREE</span><h2>Good things find<br><em>new stories.</em></h2></div>
+      <div class="how-steps">
+        <article><span class="step-number">01</span><div class="step-icon">⌕</div><h3>Find your thing</h3><p>Jelajahi barang pre-loved berdasarkan jenis transaksi, kategori, kondisi, dan lokasi.</p></article>
+        <article><span class="step-number">02</span><div class="step-icon">↗</div><h3>Make a move</h3><p>Beli, ajukan sewa, atau tawarkan barter. Hubungi pemilik untuk menyepakati detail.</p></article>
+        <article><span class="step-number">03</span><div class="step-icon">♡</div><h3>Pass it forward</h3><p>Gunakan barang dengan maksimal, lalu berikan kesempatan untuk cerita berikutnya.</p></article>
+      </div>
+    </section>
+
+    <!-- CTA penutup mengajak mahasiswa memanfaatkan barang yang sudah tidak digunakan. -->
+    <section class="closing-cta section-wrap">
+      <div><span class="eyebrow">YOUR CLOSET / DESK CALLED</span><h2>Someone might need<br>what you <em>don't.</em></h2></div>
+      <button class="button button-light" id="openListingBottom" type="button">Titip barang sekarang <span>↗</span></button>
+      <span class="closing-doodle" aria-hidden="true">✳</span>
+    </section>
+  </main>
+
+  <!-- Footer berisi identitas dan catatan singkat bahwa ini merupakan proyek demo. -->
+  <footer class="site-footer section-wrap"><a class="brand footer-brand" href="#home"><span class="brand-mark">m<span>t</span></span><span class="brand-name">mr<span>thrifter</span><small>STUDENT MARKETPLACE</small></span></a><p>Buy less new. Make more stories.</p><small>© 2026 Mr Thrifter · Student marketplace concept</small></footer>
+
+  <!-- Modal listing digunakan untuk membuat barang jual, sewa, atau barter. -->
+  <dialog class="listing-dialog" id="listingDialog">
+    <div class="dialog-header"><div><span class="eyebrow">GIVE YOUR ITEM A NEW STORY</span><h2>Titip <em>barang.</em></h2></div><button class="close-dialog" id="closeListing" aria-label="Tutup form" type="button">×</button></div>
+    <form id="listingForm">
+      <div class="form-grid">
+        <label class="form-field full">Nama barang<input name="title" required maxlength="70" placeholder="Contoh: Kalkulator scientific Casio"></label>
+        <label class="form-field">Jenis transaksi<select name="type" id="listingType" required><option value="sale">Jual / Beli</option><option value="rent">Sewa</option><option value="barter">Barter</option></select></label>
+        <label class="form-field">Kategori<select name="category" required><option>Elektronik</option><option>Buku</option><option>Fashion</option><option>Perlengkapan Kuliah</option><option>Lainnya</option></select></label>
+        <label class="form-field">Kondisi<select name="condition" id="listingCondition" required><option value="rarely">Jarang dipakai</option><option value="sometimes">Lumayan sering dipakai</option><option value="often">Sering dipakai</option><option value="new">New</option></select></label>
+        <label class="form-field">Lokasi<input name="location" required placeholder="Contoh: Area UGM, Yogyakarta"></label>
+        <label class="form-field full">Deskripsi<textarea name="description" rows="3" required placeholder="Ceritakan kondisi, kelengkapan, dan detail barang..."></textarea></label>
+        <label class="form-field">Nama penjual<input name="seller" required placeholder="Nama kamu"></label>
+        <label class="form-field">Nomor WhatsApp<input name="phone" required inputmode="tel" placeholder="62812xxxxxxxx"></label>
+        <label class="form-field full">URL foto barang (opsional)<input name="image" type="url" placeholder="https://..."></label>
+
+        <!-- Bagian harga disembunyikan untuk barter dan ditampilkan untuk jual/sewa. -->
+        <div class="price-fields full" id="priceFields">
+          <div class="form-grid">
+            <label class="form-field" id="newPriceField">Harga beli baru (Rp)<input name="originalPrice" id="formOriginalPrice" type="number" min="1" placeholder="500000"></label>
+            <label class="form-field" id="salePriceField">Harga jual normal (Rp)<input name="listedPrice" id="formListedPrice" type="number" min="1" placeholder="300000"></label>
+            <label class="form-field hidden" id="discountPriceField">Harga diskon (opsional)<input name="discountPrice" id="formDiscountPrice" type="number" min="1" placeholder="250000"></label>
+            <label class="form-field hidden" id="rentalPriceField">Tarif sewa (Rp)<input name="rentalPrice" id="formRentalPrice" type="number" min="1" placeholder="30000"></label>
+            <label class="form-field hidden" id="rentalUnitField">Satuan sewa<select name="rentalUnit" id="formRentalUnit"><option value="hour">Per jam</option><option value="day">Per hari</option><option value="week">Per minggu</option></select></label>
+          </div>
+          <div class="recommendation-box" id="recommendationBox"><span>✦</span><div><small>Rekomendasi harga otomatis</small><strong id="recommendationText">Masukkan harga beli baru dan kondisi barang.</strong><p>Estimasi ini bersifat saran. Penjual tetap menentukan harga akhir.</p></div></div>
+          <p class="discount-hint hidden" id="discountHint">Diskon akan dihitung otomatis berdasarkan harga normal dan harga diskon.</p>
+        </div>
+
+        <!-- Untuk barter, form meminta barang yang ingin diterima sebagai gantinya. -->
+        <label class="form-field full hidden" id="wantedItemField">Barang yang diinginkan sebagai tukaran<input name="wantedItem" id="wantedItemInput" placeholder="Contoh: Buku kalkulus edisi terbaru"></label>
+      </div>
+      <div class="form-error hidden" id="formError" role="alert"></div>
+      <div class="dialog-actions"><button class="button button-outline" id="cancelListing" type="button">Batal</button><button class="button button-dark" type="submit">Publikasikan barang ↗</button></div>
+      <p class="form-disclaimer">Dengan mempublikasikan barang, kamu setuju untuk menyepakati pembayaran dan serah terima langsung dengan calon pembeli/penyewa.</p>
+    </form>
+  </dialog>
+
+  <!-- Script diletakkan setelah elemen HTML agar seluruh elemen sudah tersedia saat JS berjalan. -->
+  <script src="script.js"></script>
+</body>
+</html>
