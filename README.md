@@ -14,10 +14,10 @@ ThriftOper adalah nama proyek kompetisi untuk **Mr Thrifter**, sebuah konsep *st
 ### Anggota dan pembagian peran
 
 | No. | Nama anggota |
-|---|---|---|
-| 1 | `Samuel Lukas Pratama` 
-| 2 | `Nadhifa Azka Sherin`
-| 3 | `Livy Charista Darlene Ferdianto` 
+|---|---|
+| 1 | `Samuel Lukas Pratama` |
+| 2 | `Nadhifa Azka Sherin` |
+| 3 | `Livy Charista Darlene Ferdianto` |
 
 ## 2. Deskripsi Proyek
 
