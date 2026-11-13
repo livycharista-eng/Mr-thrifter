@@ -517,13 +517,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Tombol untuk membuka form listing.
   [
-    "openListingTop",
-    "openListingHero",
-    "openListingCatalog",
-    "openListingBottom"
-  ].forEach((id) => {
-    $(id).addEventListener("click", openListingDialog);
-  });
+  "openListingTop",
+  "openListingHero",
+  "openListingCatalog",
+  "openListingBottom"
+].forEach((id) => {
+  const button = $(id);
+
+  if (button) {
+    button.addEventListener("click", openListingDialog);
+  }
+});
 
   $("closeListing").addEventListener("click", () => {
     $("listingDialog").close();
