@@ -114,8 +114,11 @@ function createProductCard(item) {
   let priceHTML = "";
 
   if (item.type === "sale") {
-    const currentPrice = item.discountPrice || item.listedPrice;
-
+    const currentPrice =
+  item.discountPrice != null
+    ? item.discountPrice
+    : item.listedPrice;
+     
     priceHTML = `
       <div class="product-price">
         ${item.discountPrice ? `<del>${formatRupiah(item.listedPrice)}</del>` : ""}
@@ -207,7 +210,9 @@ function renderItems() {
   const category = $("categoryFilter").value;
   const condition = $("conditionFilter").value;
   const location = $("locationFilter").value.trim().toLowerCase();
-  const maxPrice = Number($("maxPriceFilter").value);
+ const maxPriceValue = $("maxPriceFilter").value.trim();
+const maxPrice = Number(maxPriceValue);
+const hasMaxPrice = maxPriceValue !== "";
   const minDiscount = Number($("discountFilter").value);
 
   const filtered = items.filter((item) => {
@@ -227,7 +232,8 @@ function renderItems() {
       ? Number(item.rentalPrice)
       : Number(item.discountPrice || item.listedPrice || 0);
 
-    const matchesPrice = !maxPrice || (price > 0 && price <= maxPrice);
+    const matchesPrice = !hasMaxPrice ||
+  (price > 0 && price <= maxPrice);
 
     const discount = item.type === "sale" && item.discountPrice && item.listedPrice
       ? Math.round((1 - Number(item.discountPrice) / Number(item.listedPrice)) * 100)
@@ -372,15 +378,15 @@ function createListing(event) {
 
   // Validasi harga diskon.
   if (
-    type === "sale" &&
-    discountPrice &&
-    (discountPrice <= 0 || discountPrice >= listedPrice)
-  ) {
-    showFormError(
-      "Harga diskon harus lebih dari Rp0 dan lebih rendah daripada harga normal."
-    );
-    return;
-  }
+  type === "sale" &&
+  formData.get("discountPrice") !== "" &&
+  (discountPrice <= 0 || discountPrice >= listedPrice)
+) {
+  showFormError(
+    "Harga diskon harus lebih dari Rp0 dan lebih rendah daripada harga normal."
+  );
+  return;
+}
 
   if (type !== "barter" && (!originalPrice || originalPrice <= 0)) {
     showFormError("Masukkan harga beli baru yang valid.");
